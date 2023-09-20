@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Internet2 Technology Exchange: Hybrid Cloud Models</title>
+		<title>Internet2 Technology Exchange: IU's Hybrid Cloud Model</title>
 
     <link href="//assets.iu.edu/favicon.ico" rel="shortcut icon" />
 		<link rel="stylesheet" href="dist/reset.css">
@@ -19,8 +19,8 @@
 			<div class="slides">
         <section class="nofooter" data-background-image="img/techex-cover.png" data-background-size="contain" data-background-color="#343434">
           <!-- <img src="img/iu-logo-top-tail.svg" style="position: absolute; left: 0; top: 0; width: 10%; background: inherit; border: 0; box-shadow: none;" /> -->
-          <h3 style="color: white; margin-top: 30%; margin-bottom: 1em; text-align: left; font-size: 1.25em; text-transform: uppercase;">
-            Hybrid Cloud Models<br/>
+          <h3 style="color: white; margin-top: 30%; margin-bottom: 1em; text-align: left; font-size: 1.25em;">
+            IU's Hybrid Cloud Model<br/>
             <!-- <small style="color: #999;">A Platform for Application Development</small> -->
           </h3>
           <div style="float: left; text-align: left; color: #bbb">
@@ -28,10 +28,190 @@
             <small>Enterprise Platforms, Indiana University</small>
           </div>
         </section>
-        <!-- <section data-background-image="img/questions.jpg" class="has-image-credit">
-          <h2 class="textbox">Questions?</h2>
-          <span class="image-credit">Image credit: NASA HQ Photo/<a href="https://www.flickr.com/photos/nasahqphoto/52503151166">Flickr.com</a></span>
-        </section> -->
+        <section>
+          <section>
+            <h3>Enterprise Platforms</h3>
+              <div style="margin-top: 2rem; font-size: .8em;">
+                <ul>
+                  <li class="fragment fade-in-then-semi-out">Part of central IT at IU: UITS</li>
+                  <li class="fragment fade-in-then-semi-out">
+                    Combination of several former groups:<br />
+                    <ul>
+                      <li>Systems Integration/Middleware</li>
+                      <li>Linux Administration</li>
+                      <li>Database Administration</li>
+                      <li>Cloud Support</li>
+                    </ul>  
+                  </li>
+                </ul>
+              </div>
+          </section>
+          <section>
+            <h3>Agenda</h3>
+            <ul>
+              <li>Historical problems and solutions</li>
+              <li>Current strategy</li>
+              <li>Migration towards the cloud</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section class="nofooter" data-background-image="img/techex-transition.png" data-background-size="contain" data-background-position="right">
+            <div style="width: 55%;">
+              <h2 style="text-align: left; font-size: var(--r-heading3-size);">Historical problems and solutions</h2>
+            </div>
+          </section>
+          <section>
+            <h3>Problem 1: Connecting back to resources on-prem</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Need access to protected resource</li>
+              <li class="fragment fade-in-then-semi-out">Networking group maintains Direct Connect / ExpressRoute / etc</li>
+              <li class="fragment fade-in-then-semi-out">Networking expertise brought in for configuration</li>
+              <li class="fragment fade-in-then-semi-out">Billing shared among groups utilizing this service</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Problem 2: Storage</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">So many storage solutions</li>
+              <li class="fragment fade-in-then-semi-out">Moving administrative storage to SaaS solutions like Microsoft Teams</li>
+              <li class="fragment fade-in-then-semi-out">Assistance with understanding and configuring cloud storage</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Problem 3: Understanding cost/funding model</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Well-defined, fixed costs on-prem</li>
+              <li class="fragment fade-in-then-semi-out">Transition to OpEx model is challenging to navigate</li>
+              <li class="fragment fade-in-then-semi-out">Varying challenges with resellers</li>
+              <li class="fragment fade-in-then-semi-out">Bringing visibility with <a href="https://kion.io/">Kion</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Problem 4: Availability of on-prem resources</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Need access to assets like our IAM stack</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section class="nofooter" data-background-image="img/techex-transition.png" data-background-size="contain" data-background-position="right">
+            <div style="width: 55%;">
+              <h2 style="text-align: left; font-size: var(--r-heading3-size);">Current strategy</h2>
+            </div>
+          </section>
+          <section>
+            <h3>Containerization</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Utilizing containers in production since 2015</li>
+              <li class="fragment fade-in-then-semi-out">Robust deployment of Kubernetes utilizing<br /> VMware Tanzu</li>
+              <li class="fragment fade-in-then-semi-out">Portability and strong operating model</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Types of workloads</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Java, .NET Core, Python, Node,<br /> Ruby on Rails, PHP, etc.</li>
+              <li class="fragment fade-in-then-semi-out">Persistent workloads like databases,<br /> caches, queues, etc.</li>
+              <li class="fragment fade-in-then-semi-out">Supporting services for ingress,<br /> secrets, certificates, etc.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Rethinking development methodology</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Moving towards smaller, stateless applications</li>
+              <li class="fragment fade-in-then-semi-out">Well defined relationships between infrastructure components</li>
+              <li class="fragment fade-in-then-semi-out">Templates lower barrier of entry</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section class="nofooter" data-background-image="img/techex-transition.png" data-background-size="contain" data-background-position="right">
+            <div style="width: 55%;">
+              <h3 style="text-align: left; font-size: var(--r-heading3-size);">Migration towards the cloud</h3>
+            </div>
+          </section>
+          <section>
+            <h3>Exercising container portability</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Workloads can be deployed to multiple clusters</li>
+              <li class="fragment fade-in-then-semi-out">Need to migrate to new Kubernetes distribution</li>
+              <li class="fragment fade-in-then-semi-out">Lessen or remove impact on development teams</li>
+            </ul>
+          </section>
+          <section data-background="linear-gradient(90deg, white 45%, #efefef 45%)">
+            <div class="two-column">
+              <div class="left">
+                <h3 style="margin-top: 1em;">Migration process</h3>
+                <ul style="font-size: .8em;">
+                  <li class="fragment fade-in-then-semi-out" data-fragment-index="2">Heavy use of Helm</li>
+                  <li class="fragment fade-in-then-semi-out" data-fragment-index="13">Argo Events</li>
+                  <li class="fragment fade-in-then-semi-out" data-fragment-index="18">Argo Workflows</li>
+                  <li class="fragment fade-in-then-semi-out" data-fragment-index="24">Kubernetes API</li>
+                  <li class="fragment fade-in-then-semi-out" data-fragment-index="25">F5 Load Balancer AS3 API</li>
+                  <li class="fragment fade-in-then-semi-out" data-fragment-index="27">Parallelization</li>
+                  <li class="fragment fade-in-then-semi-out" data-fragment-index="28">Synchronization</li>
+                </ul>
+              </div>
+              <div class="right">
+                <div class="r-stack">
+                  <img src="img/resource-discovery-001.png" style="width: 80%; margin-top: 10%;" class="fragment fade-out" data-fragment-index="3" />
+                  <img src="img/resource-discovery-002.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="3" />
+                  <img src="img/resource-discovery-003.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="4" />
+                  <img src="img/resource-discovery-004.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="5" />
+                  <img src="img/resource-discovery-005.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="6" />
+                  <img src="img/resource-discovery-006.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="7" />
+                  <img src="img/resource-discovery-007.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="8" />
+                  <img src="img/resource-discovery-008.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="9" />
+                  <img src="img/resource-discovery-009.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="10" />
+                  <img src="img/resource-discovery-010.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="11" />
+                  <img src="img/resource-discovery-011.png" style="width: 80%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="12" />
+                  <pre style="margin: 0; box-shadow: none; justify-self: end; font-size: .5em; margin-top: 30%;" class="fragment fade-in" data-fragment-index="14">
+                    <code class="json fragment fade-out" data-fragment-index="18" data-trim data-noescape style="min-height: auto;"><span class="deemphasize">{</span>
+  <span class="fragment highlight-current-blue" data-fragment-index="15">"release": "myapp"</span>
+  <span class="fragment highlight-current-blue" data-fragment-index="16">"source": {
+    "cluster": "old-es-test.kube.iu.edu",
+    "namespace": "ua-vpit/enterprise-systems/ep"
+  }</span><span class="deemphasize">,</span>
+  <span class="fragment highlight-current-blue" data-fragment-index="17">"target": {
+    "cluster": "new-es-test.kube.iu.edu",
+    "namespace": "ua-vpit/enterprise-systems/ep"
+  }</span>
+<span class="deemphasize">}</span></code>
+                  </pre>
+                  <img src="img/migration-process-001.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="19" />
+                  <img src="img/migration-process-002.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="20" />
+                  <img src="img/migration-process-003.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="21" />
+                  <img src="img/migration-process-004.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="22" />
+                  <img src="img/migration-process-005.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="23" />
+                  <img src="img/migration-process-006.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="24" />
+                  <img src="img/migration-process-007.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="25" />
+                  <img src="img/migration-process-008.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="26" />
+                  <img src="img/migration-process-009.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="27" />
+                  <img src="img/migration-process-010.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="28" />
+                  <img src="img/migration-process-011.png" style="width: 65%; margin-top: 10%;" class="fragment fade-in-then-out" data-fragment-index="29" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Results</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Migrated 163 Redis clusters in test<br /> (~2,000 containers)</li>
+              <li class="fragment fade-in-then-semi-out">Zero downtime or monitoring alerts</li>
+              <li class="fragment fade-in-then-semi-out">Future flexibility in maintaining our<br /> workloads</li>
+              <li class="fragment fade-in-then-semi-out">Clusters as cattle</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Next Steps</h3>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">Tanzu Mission Control for managing<br /> cloud-based Kubernetes clusters</li>
+              <li class="fragment fade-in-then-semi-out">Replicating secrets across clouds</li>
+              <li class="fragment fade-in-then-semi-out">Lots of fine details to figure out</li>
+            </ul>
+          </section>
+        </section>
         <section class="nofooter" data-background-image="img/techex-transition.png" data-background-size="contain" data-background-position="right">
           <div style="width: 55%;">
             <h3 style="text-align: left;">
@@ -51,6 +231,7 @@
     <div id="background" style="display: none;"></div>
 
 		<script src="dist/reveal.js"></script>
+    <script src="dist/highlight.js"></script>
 		<!-- <script src="plugin/notes/notes.js"></script> -->
 		<!-- <script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script> -->
@@ -65,6 +246,7 @@
         controls: false,
         progress: true,
         overview: false,
+        plugins: [ RevealHighlight ],
       });
       Reveal.addEventListener( 'slidechanged', function( event ) {
         var suppressFooter = event.currentSlide.classList.contains('nofooter');

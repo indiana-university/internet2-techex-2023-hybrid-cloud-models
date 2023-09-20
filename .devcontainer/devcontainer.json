@@ -6,6 +6,6 @@
   "features": {
     "ghcr.io/devcontainers-contrib/features/go-task:1": ""
   },
-	"forwardPorts": [ 8000 ],
+	"forwardPorts": [ 8000, 35729 ],
 	"postCreateCommand": "task dev"
 }

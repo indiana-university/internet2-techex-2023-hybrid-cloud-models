@@ -474,3 +474,48 @@ img {
   opacity: 1;
   color: inherit;
 }
+
+.reveal .slides section .hljs.yaml .highlight-current-blue.current-fragment,
+.reveal .slides section .hljs.json .highlight-current-blue.current-fragment,
+.reveal .slides section .hljs.xml .highlight-current-blue.current-fragment {
+  opacity: 1;
+  color: inherit;
+}
+
+.reveal pre:has(code) {
+  max-width: 45vw;
+}
+
+.reveal code {
+  background-color: #23241f;
+  display: inline-block;
+  border-radius: 7px;
+}
+
+.reveal small code {
+  vertical-align: baseline;
+}
+
+.reveal .slides section .hljs.yaml span.fragment,
+.reveal .slides section .hljs.yaml span.deemphasize,
+.reveal .slides section .hljs.json span.fragment,
+.reveal .slides section .hljs.json span.deemphasize,
+.reveal .slides section .hljs.shell span.fragment,
+.reveal .slides section .hljs.shell span.deemphasize,
+.reveal .slides section .hljs.xml span.fragment,
+.reveal .slides section .hljs.xml span.deemphasize {
+  opacity: 0.4;
+}
+
+.reveal .slides section .hljs.yaml span.fragment.highlight-current-red {
+  opacity: 1;
+}
+
+.reveal .slides section .hljs.yaml .highlight-current-blue.current-fragment,
+.reveal .slides section .hljs.xml .highlight-current-blue.current-fragment,
+.reveal .slides section .hljs.json .highlight-current-blue.current-fragment,
+.reveal .slides section .hljs.shell .highlight-current-blue.current-fragment,
+.reveal .slides section .hljs.shell .fade-in.current-fragment {
+  opacity: 1;
+  color: inherit;
+}
